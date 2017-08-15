@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package services;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import model.Branch;
+
+/**
+ *
+ * @author it177479
+ */
+public class branchService {
+    
+    
+    public Branch getBranch(String username) throws SQLException, Exception{
+        
+        Branch branch = new Branch();
+        
+        Connection conn = null;
+        connection newConn = new connection();
+        Properties prop = new Properties(); 
+                   
+        conn = newConn.connectAs400DB(5,"","");
+
+        if (conn != null){
+            
+            // load a properties file
+            prop.load(connection.class.getResourceAsStream("dbConfig.properties"));
+            Statement st2 = conn.createStatement();
+               
+            String sql1 = "SELECT brnseqn,brncode,brnname,MBRNRNST,MBRNLTWD,MBRNNXDT FROM "
+                        + prop.getProperty("DATA_LIB")+"/pwpusb01,"
+                        + prop.getProperty("DATA_LIB")+"/pwpbrn01,"
+                        + prop.getProperty("DATA_LIB")+"/PWTMBRN1 "
+                        + "WHERE usbprf='"+username+"'"
+                        + "AND usbbrsq=brnseqn AND brnseqn = MBRNSEQN";
+            
+            System.out.println("sql:---"+sql1);
+            
+            ResultSet rs2 = st2.executeQuery(sql1);
+    
+            if (rs2.next()) {
+                
+                branch.setCode(rs2.getInt("brncode"));
+                branch.setLastWorkDate(rs2.getInt("MBRNLTWD"));
+                branch.setName(rs2.getString("brnname"));
+                branch.setNextWorkDate(rs2.getInt("MBRNNXDT"));
+                branch.setRunningStatus(rs2.getInt("MBRNRNST"));
+                branch.setSequence(rs2.getInt("brnseqn"));
+          
+            }
+        }
+         
+        return branch;
+    }
+}

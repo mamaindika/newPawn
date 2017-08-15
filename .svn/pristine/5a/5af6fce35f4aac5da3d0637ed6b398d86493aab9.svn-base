@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package services;
+
+import model.Branch;
+
+/**
+ *
+ * @author it177479
+ */
+public class branchDayProcess {
+    
+    public static String dayStart(int branchSeq){
+     
+        Branch newBranch = new Branch();
+        String result = "success";
+        
+        
+        
+        
+        return result;
+    }
+    
+    
+    public static String dayEnd(int branchSeq){
+     
+        Branch newBranch = new Branch();
+        String result = "success";
+        
+        
+        
+        
+        return result;
+    }
+}

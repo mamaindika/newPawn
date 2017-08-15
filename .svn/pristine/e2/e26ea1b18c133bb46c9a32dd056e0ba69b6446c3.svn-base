@@ -1,0 +1,22 @@
+<style>
+    .btn-primary{
+        background-color:#b3cccc; 
+    }
+    .sidenavv{
+       background-color: #94b8b8;
+       border:3px solid white;
+       overflow-y:auto;
+    }
+</style>    
+
+<div class="col-sm-2 sidenavv" style="padding-top:20px;padding-bottom: 20px;height:100% ;border:1px solid white;">
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayStart" >Day Start</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayEnd">Day End</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayReopen">Day Reopen</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="PartPayment">Part Payment</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="Redemption">Redemption</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="TicketInquiry">Ticket Inquiry</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="MarkLostTicket">Mark Lost Ticket</a>
+      <a href="#" class="link btn btn-primary btn-lg btn-block" data-link="Reports">Reports</a>
+     
+</div>

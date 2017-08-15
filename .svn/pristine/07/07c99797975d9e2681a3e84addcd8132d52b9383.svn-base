@@ -1,0 +1,211 @@
+<%-- 
+    Document   : ticketInquiry
+    Created on : Mar 2, 2017, 12:01:56 PM
+    Author     : boc
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+        
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"     src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+        .rowCont{
+
+          position: absolute;
+          left:0px;
+          right: 0px;
+          bottom: 50px;
+          top: 270px;
+          display: table-row;
+        }
+        .well{
+            padding: 2px;
+        }
+        .jumbotron{
+            background-color: #d1e0e0;
+        }
+        .panel{
+            margin-bottom: 3px;
+        }
+        .panel-heading{
+            background-color:black;
+        }
+        .panel-scroll::-webkit-scrollbar{
+            width: 4px;
+            background-color:;
+        }
+        .panel-scroll::-webkit-scrollbar-thumb{
+            
+            background-color: black;
+        }
+        .panel-title{
+            text-align: center;
+            
+        }
+        .panel-primary{
+            background-color: #c2d6d6;
+        }
+       
+    </style>
+
+
+</head>
+    
+    <body onload="startTime()">
+        <%@ include file="div/header.html" %>
+
+        <%@ include file="div/userBar.jsp" %>
+        <div class="rowCont " style="height: auto;">
+            <div class="col-sm-3 well" style="height: 100%;">
+                <div class="panel panel-primary" style="height: 100%">
+                    <div class="panel-heading" style="background-color: black">
+                      <h2 class="panel-title">Tickets </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 well" style="height: 100%;">
+                <div class="panel panel-primary" style="height:100%">
+                    <div class="panel-heading" style="background-color: black">
+                      <h3 class="panel-title">Customer</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>              
+            </div>
+            <div class="col-sm-6 well" style="height: 100%;">
+                <div class="panel panel-primary " style="height: 100%;" >
+                    <div class="panel-heading" style="height: 6%;background-color: black">
+                      <h3 class="panel-title"> Ticket article</h3>
+                    </div>
+                    <div class="panel-body panel-scroll" style="height: 94%;overflow-y: auto">
+                      Panel content<br><br><br><br><br><br><br><br><br>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>                
+            </div>
+            
+        </div>
+        <%@ include file="div/footer.html" %>
+    </body>
+</html>

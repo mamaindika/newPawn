@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package services;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+
+/**
+ *
+ * @author it177479
+ */
+public class userService {
+    
+    
+    public String getUserStatus(String username) throws Exception{
+        
+        String result = null;
+        
+        Connection conn = null;
+        connection newConn = new connection();
+        Properties prop = new Properties(); 
+                   
+        conn = newConn.connectAs400DB(5,"","");
+
+        if (conn != null){
+            
+            // load a properties file
+            prop.load(connection.class.getResourceAsStream("dbConfig.properties"));
+            Statement st2 = conn.createStatement();
+               
+            String sql1 = "SELECT usbprf,usbstat FROM "
+                        + prop.getProperty("DATA_LIB")+"/pwpusb01 "
+                        + "WHERE usbprf='"+username+"'";
+            
+            System.out.println("sql:---"+sql1);
+            
+            ResultSet rs2 = st2.executeQuery(sql1);
+    
+            if (rs2.next()) {
+               result = rs2.getString("usbstat");
+           }else{
+                result = "D";
+            }
+        }
+        
+        conn.close();
+        return result;
+    }    
+}

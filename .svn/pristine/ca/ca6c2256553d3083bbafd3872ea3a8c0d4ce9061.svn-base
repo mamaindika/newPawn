@@ -1,0 +1,19 @@
+<style>
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  padding: 1rem;
+  background-color: #b3cccc;
+  text-align: center;
+}
+
+</style>
+<div class="footer">
+        
+            <p>Powered by Bank of Ceylon IT Division</p>  
+       
+</div>  

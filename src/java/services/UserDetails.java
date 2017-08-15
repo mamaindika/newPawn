@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package services;
+
+import model.Branch;
+import model.User;
+
+/**
+ *
+ * @author boc
+ */
+public class UserDetails {
+    
+    
+    public static String name ="branch name";
+    public static String username = "user name";
+    public static int code;
+    public static int sequence;
+    public static int runningStatus;
+    public static int lastWorkDate = 20170303;
+    public static int nextWorkDate = 20170303;
+
+    public UserDetails(User usr,Branch brch) throws Exception {
+        this.name = brch.getName();
+        this.username = usr.getUsername();
+        this.lastWorkDate = (int) brch.getLastWorkDate();
+        this.runningStatus = brch.getRunningStatus();
+        this.sequence = brch.getSequence();
+        
+        if (brch.getRunningStatus() == 1){
+        branchService bs = new branchService();
+        this.nextWorkDate =  bs.getNextDate(brch);
+        }else{
+           this.nextWorkDate = brch.getNextWorkDate();
+        }
+        
+    }
+    
+}

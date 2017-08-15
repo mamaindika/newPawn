@@ -1,0 +1,22 @@
+<style>
+    .btn-primary{
+        background-color:#b3cccc; 
+    }
+    .sidenavv{
+       background-color: #94b8b8;
+       border:3px solid white;
+       overflow-y:auto;
+    }
+</style>    
+
+<div class="col-sm-2 sidenavv" style="padding-top:20px;padding-bottom: 20px;height:100% ;border:1px solid white;">
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayStart" id="DayStart" >Day Start</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayEnd" id="DayEnd">Day End</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="DayReopen" id="DayReopen">Day Reopen</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="PartPayment" id="PartPayment">Part Payment</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="Redemption" id="Redemption">Redemption</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="TicketInquiry" id="TicketInquiry">Ticket Inquiry</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="MarkLostTicket" id="MarkLostTicket">Mark Lost Ticket</button>
+      <button href="#" class="link btn btn-primary btn-lg btn-block" data-link="Reports" id="Reports">Reports</button>
+     
+</div>

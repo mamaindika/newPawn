@@ -1,0 +1,84 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package model;
+
+import services.branchService;
+
+/**
+ *
+ * @author it177479
+ */
+public class Branch {
+    
+    private String name;
+    private int code;
+    private int sequence;
+    private int runningStatus;
+    private int lastWorkDate;
+    private int nextWorkDate;
+    private int calenderprofile;
+    
+    
+      
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public int getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(int sequence) {
+        this.sequence = sequence;
+    }
+
+    public int getRunningStatus() {
+        return runningStatus;
+    }
+
+    public void setRunningStatus(int runningStatus) {
+        this.runningStatus = runningStatus;
+    }
+
+    public int getLastWorkDate() {
+        return lastWorkDate;
+    }
+
+    public void setLastWorkDate(int lastWorkDate) {
+        this.lastWorkDate = lastWorkDate;
+    }
+
+    public int getNextWorkDate() {
+        return nextWorkDate;
+    }
+
+    public void setNextWorkDate(int nextWorkDate) {
+        this.nextWorkDate = nextWorkDate;
+    }
+
+    
+
+    public int getCalenderprofile() {
+        return calenderprofile;
+    }
+
+    public void setCalenderprofile(int calenderprofile) {
+        this.calenderprofile = calenderprofile;
+    }
+    
+}

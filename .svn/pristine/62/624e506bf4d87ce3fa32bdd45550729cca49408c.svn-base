@@ -1,0 +1,40 @@
+<%-- 
+    Document   : index
+    Created on : Feb 28, 2017, 1:56:56 PM
+    Author     : it177479
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RSNS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootbox.min.js"></script>
+</head>
+
+
+
+    <%@ include file="div/header.html" %>
+     
+    <%@ include file="div/login.jsp" %>     
+
+    <%@ include file="div/footer.html" %>
+    
+    <%! String s1 = ""; %>
+    <% s1  = (String) session.getAttribute("validate");%>
+    <% if(s1.equals("DayEndsuccess")){ %>
+         <script>
+                bootbox.alert("Day End process successfully completed");
+        </script>
+    <% }%>
+
+</html>
+
+
